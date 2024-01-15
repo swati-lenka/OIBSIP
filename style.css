@@ -1,70 +1,104 @@
-* {
+*{
     margin: 0;
     padding: 0;
+    font-family: 'Poppins', sans-serif;
     box-sizing: border-box;
 }
-
-.container {
-    background-color: rgb(235, 196, 230);
-    min-height: 65vh;
-    border: 10px solid #f7f3f6;
-}
-
-.content {
-    max-width: 900px;
-    margin: 0 auto;
-}
-
-
-
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #c564fad2;
-    margin: 20%;
-}
-
-
-#title {
-    margin: 0;
-    padding: 0;
-    text-align: center;
-    text-shadow: 5px 5px 10px white;
-    font-size: 7vh;
-}
-
-
-img {
-    display: inline-block;
+.container{
     width: 100%;
+    min-height: 100vh;
+    background: linear-gradient(135deg, #153677, #4e085f);
+    padding: 10px;
 }
-
-
-#caption {
+.todo-app{
+    width: 100%;
+    max-width: 540px;
+    background: #fff;
+    margin: 100px auto 20px;
+    padding: 40px 30px 70px;
+    border-radius: 10px;
+    box-shadow: 25px 25px 75px rgba(0,0,0,0.25),
+    10px 10px 70px rgba(0,0,0,0.25)
+    inset 5px 5px 10px rgba(0,0,0,0.5),
+    inset 5px 5px 20px rgba(255,255,255,0.2),
+    inset -5px -5px 15px rgba(0,0,0,0.75);
+}
+.todo-app h2{
+    color: #002765;
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+}
+.todo-app h2 img{
+    width: 30px;
+    margin-left: 10px;
+}
+.row{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #edeef0;
+    border-radius: 30px;
+    padding-left: 20px;
+    margin-bottom: 25px;
+}
+input{
+    flex: 1;
+    border: none;
+    outline: none;
+    background: transparent;
+    padding: 10px;
+    font-weight: 14px;
+}
+button{
+    border: none;
+    outline: none;
+    padding: 16px 50px;
+    background: #2ff32b;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 40px;
+}
+ul li{
+    list-style: none;
     font-size: 17px;
-    font-family: Gill Sans;
-    color: rgb(7, 7, 7);
+    padding: 12px 8px 12px 50px;
+    user-select: none;
+    cursor: pointer;
+    position: relative;
 }
-
-div#tribute-data {
-    background-color: rgba(239, 46, 219, 0.25);
-    box-shadow: 20px 20px 20px #f3cce9;
-    font-family: Georgia;
-    padding: 25px 25px;
-    margin: 11px;
-    margin-top: 50px;
+ul li::before{
+    content: '';
+    position: absolute;
+    height: 28px;
+    width: 28px;
+    border-radius: 50%;
+    background-image: url(radio.png);
+    background-size: cover;
+    background-position: center;
+    top: 12px;
+    left: 8px;
 }
-
-
-h1.title-APJ {
-    font-size: 35px;
-    color: white;
+ul li.checked{
+    color: #555;
+    text-decoration: line-through;
+}
+ul li.checked::before{
+    background-image: url(yes.png);
+}
+ul li span{
+    position: absolute;
+    right: 0;
+    top: 5px;
+    width: 40px;
+    height: 40px;
+    font-size: 22px;
+    color: #555;
+    line-height: 40px;
     text-align: center;
-    text-shadow: 5px 5px 10px black;
+    border-radius: 50%;
 }
-
-
-#tribute-link {
-    text-decoration: turquoise;
-    color: rgb(248, 245, 245);
+ul li span:hover{
+    background: #edeef0;
 }
